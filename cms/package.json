@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce-cms",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Strapi CMS for ecommerce content",
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.15.5",
+    "@strapi/plugin-users-permissions": "4.15.5",
+    "@strapi/plugin-i18n": "4.15.5",
+    "@strapi/plugin-graphql": "4.15.5",
+    "pg": "8.8.0"
+  },
+  "author": {
+    "name": "Ecommerce Team"
+  },
+  "strapi": {
+    "uuid": "ecommerce-cms"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  }
+}
