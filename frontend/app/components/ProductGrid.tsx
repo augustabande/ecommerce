@@ -28,15 +28,15 @@ export function ProductGrid() {
             {product.thumbnail && (
               <Image
                 src={product.thumbnail}
-                alt={product.title}
+                alt={product.title || 'Product image'}
                 width={300}
                 height={300}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform"
               />
             )}
           </div>
-          <h3 className="font-medium text-gray-900 mb-1">{product.title}</h3>
-          <p className="text-gray-600 text-sm mb-2">{product.description}</p>
+          <h3 className="font-medium text-gray-900 mb-1">{product.title || 'Untitled Product'}</h3>
+          <p className="text-gray-600 text-sm mb-2">{product.description || 'No description'}</p>
           <p className="font-semibold text-primary-600">
             €{(product.variants?.[0]?.prices?.[0]?.amount || 0) / 100}
           </p>
