@@ -8,14 +8,12 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient())
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <MedusaProvider
-        queryClientProviderProps={{ client: queryClient }}
-        baseUrl={process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || 'http://localhost:9000'}
-        publishableApiKey={process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY}
-      >
-        {children}
-      </MedusaProvider>
-    </QueryClientProvider>
+    <MedusaProvider
+      baseUrl={process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || 'http://localhost:9000'}
+      publishableApiKey={process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY}
+      queryClientProviderProps={{ client: queryClient }}
+    >
+      {children}
+    </MedusaProvider>
   )
 }
