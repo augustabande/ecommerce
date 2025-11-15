@@ -5,7 +5,7 @@
   "scripts": {
     "setup": "npm install && npm run setup:backend && npm run setup:frontend && npm run setup:cms",
     "setup:backend": "cd backend && npm install",
-    "setup:frontend": "cd frontend && npm install", 
+    "setup:frontend": "cd frontend && npm install",
     "setup:cms": "cd cms && npm install",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:cms\"",
     "dev:backend": "cd backend && npm run dev",
@@ -18,5 +18,9 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.9",
+    "react-query": "^3.39.3"
   }
 }
